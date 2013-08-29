@@ -23,7 +23,7 @@ class PyTest(Command):
 setup(
     name='WebPattern',
     version='0.0.1',
-    url='http://github.com/euphori/webpat',
+    url='http://github.com/euphoris/webpat',
     license='MIT license',
     author='Jae-Myoung Yu',
     author_email='euphoris@gmail.com',
