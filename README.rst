@@ -23,3 +23,19 @@ Or from the `GitHub repository`__:
 .. _WebPattern: https://github.com/euphoris/webpat
 .. _PyPI: http://pypi.python.org/pypi/WebPattern
 __ https://github.com/euphoris/webpat
+
+Community
+---------
+
+GitHub
+   https://github.com/euphoris/webpat
+
+Package Index (Cheeseshop)
+   https://pypi.python.org/pypi/WebPattern
+
+Continuous Integration (Travis CI)
+   http://travis-ci.org/euphoris/webpat
+
+   .. image:: https://secure.travis-ci.org/euphoris/webpat.png?branch=master
+      :alt: Build Status
+      :target: http://travis-ci.org/euphoris/webpat
