@@ -6,6 +6,7 @@ import pytest
 from webpat.app import App
 from webpat.db import db, init_db
 from webpat.models import Base, User
+from webpat.testing import generate_client_fixture
 
 
 @pytest.fixture
@@ -46,3 +47,12 @@ def test_create_base(default_app, db_uri):
 
 def test_app(db_uri):
     App(__name__, uri=db_uri, base=Base)
+
+
+client = generate_client_fixture(App, Base)
+pytest.fixture(client)
+
+
+def test_client(client):
+    res = client.get('/')
+    assert res.status_code == 404
