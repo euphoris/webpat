@@ -36,6 +36,7 @@ setup(
     install_requires=[
         'Flask',
         'SQLAlchemy',
+        'Flask-Login'
     ],
     tests_require=[
         'pytest'
