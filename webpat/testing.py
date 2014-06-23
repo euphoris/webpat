@@ -1,3 +1,12 @@
+from .compat import PY3
+
+
+if PY3:
+    import http.client as HTTP
+else:
+    import httplib as HTTP
+
+
 def generate_client_fixture(app_cls, base):
     """
     :param app_cls: an app class

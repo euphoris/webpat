@@ -6,7 +6,7 @@ import pytest
 from webpat.app import App
 from webpat.db import db, init_db
 from webpat.models import Base, User
-from webpat.testing import generate_client_fixture
+from webpat.testing import generate_client_fixture, HTTP
 
 
 @pytest.fixture
@@ -55,4 +55,4 @@ pytest.fixture(client)
 
 def test_client(client):
     res = client.get('/')
-    assert res.status_code == 404
+    assert res.status_code == HTTP.NOT_FOUND
