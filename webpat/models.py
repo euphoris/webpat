@@ -15,15 +15,15 @@ class User(Base):
     is_admin = Column(Boolean, default=False)
 
     def is_authenticated(self):
-        """Returns True if the user is authenticated"""
+        """Return True if the user is authenticated."""
         return self.pk is not None
 
     def is_active(self):
-        """Returns True if this is an active user"""
+        """Return True if this is an active user."""
         return self.pk is not None
 
     def is_anonymous(self):
-        """Returns True if this is an anonymous user."""
+        """Return True if this is an anonymous user."""
         return self.pk is None
 
     def get_id(self):
