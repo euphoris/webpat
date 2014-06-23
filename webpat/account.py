@@ -55,7 +55,7 @@ def sign_in(username=None, email=None, password=None):
     user = user_query(username, email).one()
 
     password_correct = check_password_hash(user.password, password)
-    if password_correct:
-        login_user(user)
-    else:
+    if not password_correct:
         raise AccountException('incorrect password')
+    login_user(user)
+    return user
